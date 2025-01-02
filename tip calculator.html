@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>tip calculator</title>
+<style>
+.outline{
+background-color:red;
+padding-left:500px;
+height:650px;
+padding-top:80px;
+}
+.cal{
+background-color:white;
+color:black;
+border:2px solid black;
+width:350px;
+height:480px;
+}
+.heading{
+background-color:black;
+color:white;
+width:350px;
+text-align:center;
+}
+.text{
+padding-left:30px;
+}
+button{
+background-color:red;
+color:white;
+border:2px solid black;
+margin-left:60px;
+width:150px;
+height:40px;
+}
+#tip{
+margin-left:80px;
+}
+</style>
+<script>
+function calculate(){
+var a=document.getElementById('a').value
+var quality=document.getElementById('quality').value
+var p=document.getElementById('p').value
+var tipAmount=(a*quality)/100
+var total =parseInt(a)+parseInt(tipAmount)
+var perhead=total/p
+document.getElementById('result').innerHTML=total
+}
+</script>
+</head>
+<body>
+<div class="outline">
+<div class="cal">
+<div class="heading">
+<h3>TIP SERVICE CALCULATOR</h3>
+</div>
+<div class="text">
+<label for="bill">How much was your bill?</label><br> <br>rupees
+<input type="number" name="bill" id="a" placeholder="100"><br><br>
+<label for="quality">How was your service?</label><br><br>
+<select name="quality" id="quality">
+<option value="10">10% good</option>
+<option value="20">20% good</option>
+<option value="30">30% good</option>
+</select><br><br>
+<label for="people">How many people sharing the bill?</label><br><br>
+<input type="number" name="people" id="p">people<br><br>
+</div>
+<div id="count">
+<button onclick="calculate()"><b>CALCULATE TIP!</b></button>
+</div>
+<div id="tip">
+<h3>TIP AMOUNT</h3>
+<h4 id="result"></h4>
+</div>
+</div>
+</div>
+</body>
+</html>
