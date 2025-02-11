@@ -4,9 +4,14 @@ This project is a Tip Calculator built using HTML and CSS. It allows users to ca
 
 ## Features
 Simple and intuitive UI
+
 Calculates total tip amount
+
 Divides the tip equally among the number of people
+
 Responsive design for mobile and desktop
-Technologies Used
+
+# Technologies Used
 HTML5
+
 CSS3
